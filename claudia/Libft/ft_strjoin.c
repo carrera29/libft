@@ -1,44 +1,54 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clcarre <clcarrer@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/26 08:23:01 by clcarre           #+#    #+#             */
-/*   Updated: 2022/04/04 10:32:50 by clcarre          ###   ########.fr       */
+/*   Created: 2022/03/26 12:51:51 by clcarre           #+#    #+#             */
+/*   Updated: 2022/04/04 10:35:04 by clcarre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-Reserva con malloc(3) memoria para devolver una string nueva 
-basada en la string ’s’. La nueva string empieza en el índice ’start’ 
-y tiene una longitud máxima ’len’.
-Valor devuelto: 
+Descripción:
+Reserva con malloc(3) una nueva string, basada en
+la unión de las 2 strings dadas como parámetros.
+Valor devuelto:
 - La nueva string. 
-- NULL si la reserva de memoria falla.
+- NULL si la reserva falla.
 Funciones autorizadas: malloc
 */
 #include "libft.h"
 #include <stdlib.h>
-#include <stdio.h>
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
-	size_t	i;
+	int		i;
+	int		ii;
 
-	if (!s)
+	if (!s1)
 		return (0);
-	if (len > ft_strlen(s))
-		str = malloc(sizeof(char) * (ft_strlen(s) + 1));
-	else
-		str = malloc(sizeof(char) * (len + 1));
+	i = ft_strlen(s1) + ft_strlen(s2);
+	str = malloc(sizeof(char) * i + 1);
 	if (!str)
 		return (0);
 	i = 0;
-	while (s[i] && i < len && start < ft_strlen(s))
-		str[i++] = s[start++];
+	while (s1[i])
+	{
+		str[i] = s1[i];
+		i++;
+	}
+	ii = 0;
+	while (s2[ii])
+		str[i++] = s2[ii++];
 	str[i] = '\0';
 	return (str);
 }
+/*
+int	main(void)
+{
+	printf("%s\n", ft_strjoin("hola,", " como estas"));
+	return (0);
+}*/

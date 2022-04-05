@@ -6,7 +6,7 @@
 /*   By: clcarre <clcarrer@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 08:32:08 by clcarre           #+#    #+#             */
-/*   Updated: 2022/03/25 13:51:58 by clcarre          ###   ########.fr       */
+/*   Updated: 2022/04/02 10:41:34 by clcarre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,34 @@
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	s;
-	int	r;
+	long int	s;
+	long int	r;
 
-	i = 0;
-	while ((str[i] == 32) || (str[i] >= 9 && str[i] <= 13))
-		i++;
+	while (*str == 32 || (*str >= 9 && *str <= 13))
+		str++;
 	s = 1;
-	if (str[i] == '-')
+	if ((*str == '-') || (*str == '+'))
 	{
-		s *= -1;
-		i++;
+		if (*str == '-')
+			s *= -1;
+		str++;
 	}
-	else if (str[i] == '+')
-		i++;
 	r = 0;
-	while (str[i] >= 48 && str[i] <= 57)
+	while (*str >= 48 && *str <= 57)
 	{
-		r = (r * 10) + (str[i] - 48);
-		i++;
+		if ((r * s) > 2147483647)
+			return (-1);
+		else if ((r * s) < -2147483647)
+			return (0);
+		r = (r * 10) + (*str - 48);
+		str++;
 	}
 	return (s * r);
 }
+/*
+int	main(void)
+{
+	printf("%d\n", ft_atoi("99999999999999999999999999"));
+	printf("%d\n", atoi("99999999999999999999999999"));
+	return (0);
+}*/

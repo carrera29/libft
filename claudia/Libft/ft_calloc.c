@@ -6,24 +6,21 @@
 /*   By: clcarre <clcarrer@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 10:36:58 by clcarre           #+#    #+#             */
-/*   Updated: 2022/03/26 08:30:48 by clcarre          ###   ########.fr       */
+/*   Updated: 2022/04/02 11:21:13 by clcarre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 void	*ft_calloc(size_t count, size_t size)
 {
 	char	*str;
-	size_t	i;
 
-	str = malloc(count * sizeof(size));
-	i = 0;
-	while (i < count)
-	{
-		str[i] = 0;
-		i++;
-	}
+	str = malloc(count * size);
+	if (!str)
+		return (0);
+	ft_bzero(str, (count * size));
 	return (str);
 }

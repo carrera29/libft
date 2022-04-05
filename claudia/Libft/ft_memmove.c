@@ -6,11 +6,12 @@
 /*   By: clcarre <clcarrer@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 17:30:48 by clcarre           #+#    #+#             */
-/*   Updated: 2022/03/26 09:53:36 by clcarre          ###   ########.fr       */
+/*   Updated: 2022/04/04 11:14:26 by clcarre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include  <stdio.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -20,13 +21,12 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	d = dst;
 	s = src;
+	if (!(dst || src))
+		return (0);
 	if (d > s)
 	{
-		while (len > 0)
-		{
-			len--;
+		while (len-- > 0)
 			d[len] = s[len];
-		}
 	}
 	else
 	{

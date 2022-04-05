@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clcarre <clcarrer@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/22 08:29:59 by clcarre           #+#    #+#             */
-/*   Updated: 2022/04/01 16:03:45 by clcarre          ###   ########.fr       */
+/*   Created: 2022/03/30 12:14:42 by clcarre           #+#    #+#             */
+/*   Updated: 2022/03/30 13:01:14 by clcarre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descripción:
+Envía el caracter ’c’ al file descriptor dado.
+#1. El caracter a enviar.
+#2. El file descriptor sobre el que escribir.
+Valor devuelto: Nada
+Funciones autorizadas: write
+*/
+#include <unistd.h>
 #include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	ft_putchar_fd(char c, int fd)
 {
-	size_t		i;
-	char		*destino;
-	const char	*origen;
-
-	destino = dst;
-	origen = src;
-	i = 0;
-	if (!(dst || src))
-		return (0);
-	while (i < n)
-	{
-		destino[i] = origen[i];
-		i++;
-	}
-	return (destino);
+	write(fd, &c, 1);
 }

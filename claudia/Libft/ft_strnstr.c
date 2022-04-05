@@ -6,7 +6,7 @@
 /*   By: clcarre <clcarrer@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 17:57:59 by clcarre           #+#    #+#             */
-/*   Updated: 2022/03/25 16:55:12 by clcarre          ###   ########.fr       */
+/*   Updated: 2022/04/02 09:42:33 by clcarre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,11 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	i = 0;
 	if (needle[i] == '\0')
 		return ((char *)&haystack[i]);
-	while ((haystack[i] != '\0') && (i < len))
+	while (haystack[i] && needle && (i < len))
 	{
 		c = 0;
-		while ((haystack[i] == needle[c]) && (i + c < len))
+		while ((haystack[i++] == needle[c++]) && (i <= len))
 		{
-			c++;
-			i++;
 			if (needle[c] == '\0')
 				return ((char *)&haystack[i - c]);
 		}
@@ -37,3 +35,10 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
+/*
+int	main(void)
+{
+	printf("%s\n", ft_strnstr("aaabcabcd", "aaabc", 5));
+	printf("%s\n", strnstr("aaabcabcd", "aaabc", 5));
+	return (0);
+}*/
