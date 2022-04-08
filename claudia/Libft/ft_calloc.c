@@ -6,7 +6,7 @@
 /*   By: clcarre <clcarrer@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 10:36:58 by clcarre           #+#    #+#             */
-/*   Updated: 2022/04/02 11:21:13 by clcarre          ###   ########.fr       */
+/*   Updated: 2022/04/08 08:48:11 by clcarre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	char	*str;
 
+	if (size >= SIZE_MAX)
+		return (0);
 	str = malloc(count * size);
 	if (!str)
 		return (0);

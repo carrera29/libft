@@ -6,15 +6,15 @@
 /*   By: clcarre <clcarrer@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 10:39:13 by clcarre           #+#    #+#             */
-/*   Updated: 2022/03/30 12:22:10 by clcarre          ###   ########.fr       */
+/*   Updated: 2022/04/07 14:34:05 by clcarre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 Descripción:
-Aplica la función ’f’ a cada caracter de la string
-’s’ para crear la nueva string, resultado de
-aplicar sucesivas veces ’f’ (utilizando malloc(3)).
+Aplica la función ’f’ a cada caracter de la string ’s’ 
+para crear la nueva string, 
+resultado de aplicar sucesivas veces ’f’ (utilizando malloc(3)).
 A esta función se le pasará el índice del caracter iterado.
 #1. La string que iterar.
 #2. Un puntero a la función que aplicar a cada caracter.
@@ -33,11 +33,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		i;
 	int		l;
 
+	if (!s || !f)
+		return (0);
 	l = ft_strlen(s);
 	str = malloc(sizeof(char) * (l + 1));
 	if (!str)
-		return (0);
-	if (!s || !f)
 		return (0);
 	i = 0;
 	while (i < l)

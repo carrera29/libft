@@ -6,7 +6,7 @@
 /*   By: clcarre <clcarrer@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 15:56:45 by clcarre           #+#    #+#             */
-/*   Updated: 2022/04/04 16:54:04 by clcarre          ###   ########.fr       */
+/*   Updated: 2022/04/06 09:25:01 by clcarre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,14 @@ t_list	*ft_lstnew(void *content)
 	mi_lista->next = NULL;
 	return (mi_lista);
 }
+/*
+int	main(void)
+{
+	char	content[] = "Lulu";
+	t_list	*mi_lista;
+
+	mi_lista = ft_lstnew(content);
+	printf("%s\n", mi_lista->content);
+	printf("%s\n", mi_lista->next->content);
+	return (0);
+}*/
