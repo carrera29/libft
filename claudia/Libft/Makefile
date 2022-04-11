@@ -6,7 +6,7 @@
 #    By: clcarre <clcarrer@student.42madrid.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/01 08:22:53 by clcarre           #+#    #+#              #
-#    Updated: 2022/04/11 10:29:53 by clcarre          ###   ########.fr        #
+#    Updated: 2022/04/11 10:32:23 by clcarre          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,8 +35,6 @@ $(NAME) : $(OBJS)
 
 $(B) : $(OBJS_B)
 	$(LIB) $(NAME) $(OBJS_B)
-
-$(CC) = gcc $(FLAGS) -c $< -o $(<:.c=.o)
 
 all : $(NAME)
 
