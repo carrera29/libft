@@ -22,7 +22,6 @@ Valor devuelto: Nada
 Funciones autorizadas: Ninguna
 */
 #include "libft.h"
-#include <stdio.h>
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
@@ -37,19 +36,19 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-/*
-void	*f(unsigned int i, char *s)
-{
-	s = 65 + i;
-}
 
-int	main(void)
-{
-	char	s[] = "hola";
-	int i;
+// void	*f(unsigned int i, char *s)
+// {
+// 	s = 65 + i;
+// }
 
-	i = 0;
-	ft_striteri(s, *f(i, s));
-	printf("%s\n", s);
-	return(0);
-}*/
+// int	main(void)
+// {
+// 	char	s[] = "hola";
+// 	int i;
+
+// 	i = 0;
+// 	ft_striteri(s, *f(i, s));
+// 	printf("%s\n", s);
+// 	return(0);
+// }
