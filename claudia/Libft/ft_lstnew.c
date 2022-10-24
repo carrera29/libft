@@ -21,8 +21,6 @@ contenido del parámetro ’content’.
 La variable ’next’, con NULL.
 */
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 t_list	*ft_lstnew(void *content)
 {
@@ -35,14 +33,14 @@ t_list	*ft_lstnew(void *content)
 	mi_lista->next = NULL;
 	return (mi_lista);
 }
-/*
-int	main(void)
-{
-	char	content[] = "Lulu";
-	t_list	*mi_lista;
 
-	mi_lista = ft_lstnew(content);
-	printf("%s\n", mi_lista->content);
-	printf("%s\n", mi_lista->next->content);
-	return (0);
-}*/
+// int	main(void)
+// {
+// 	char	content[] = "Lulu";
+// 	t_list	*mi_lista;
+
+// 	mi_lista = ft_lstnew(content);
+// 	printf("%s\n", mi_lista->content);
+// 	printf("%s\n", mi_lista->next->content);
+// 	return (0);
+// }
