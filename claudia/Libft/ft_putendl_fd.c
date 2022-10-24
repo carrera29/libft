@@ -19,7 +19,6 @@ seguido de un salto de línea.
 Valor devuelto: Nada
 Funciones autorizadas: write
 */
-#include <unistd.h>
 #include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
@@ -33,9 +32,9 @@ void	ft_putendl_fd(char *s, int fd)
 		write(fd, &s[i++], 1);
 	write(fd, "\n", 1);
 }
-/*
-int	main(void)
-{
-	ft_putendl_fd("hola");
-	return (0);
-}*/
+
+// int	main(void)
+// {
+// 	ft_putendl_fd("hola");
+// 	return (0);
+// }
