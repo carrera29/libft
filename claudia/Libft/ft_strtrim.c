@@ -21,8 +21,6 @@ Valor devuelto:
 Funciones autorizadas: malloc.
 */
 #include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 char	*ft_return_s(const char *s1, int i)
 {
@@ -118,9 +116,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str[i] = '\0';
 	return (str);
 }
-/*
-int	main(void)
-{
-	printf("%s\n", ft_strtrim("          ", " "));
-	return (0);
-}*/
+
+// int	main(void)
+// {
+// 	printf("%s\n", ft_strtrim("          ", " "));
+// 	return (0);
+// }
