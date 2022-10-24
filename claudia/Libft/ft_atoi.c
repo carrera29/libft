@@ -14,34 +14,35 @@
 
 int	ft_atoi(const char *str)
 {
-	long int	s;
-	long int	r;
+	long long int	s;
+	long long int	r;
+	int				i;
 
-	while (*str == 32 || (*str >= 9 && *str <= 13))
-		str++;
+	i = 0;
+	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
+		i++;
 	s = 1;
-	if ((*str == '-') || (*str == '+'))
+	if ((str[i] == '-') || (str[i] == '+'))
 	{
-		if (*str == '-')
+		if (str[i] == '-')
 			s *= -1;
-		str++;
+		i++;
 	}
 	r = 0;
-	while (*str >= 48 && *str <= 57)
+	while (str[i])
 	{
-		if ((r * s) > 2147483647)
-			return (-1);
-		else if ((r * s) < -2147483647)
-			return (0);
-		r = (r * 10) + (*str - 48);
-		str++;
+		if (str[i] >= 48 && str[i] <= 57)
+			r = (r * 10) + (str[i++] - 48);
+		else
+			return (write(1, "Error\n", 6));
+		if ((r * s) > 2147483647 || (r * s) < -2147483648)
+			return (write(1, "Error\n", 6));
 	}
 	return (s * r);
 }
-/*
-int	main(void)
-{
-	printf("%d\n", ft_atoi("99999999999999999999999999"));
-	printf("%d\n", atoi("99999999999999999999999999"));
-	return (0);
-}*/
+
+// int	main(int argc, char **argv)
+// {
+// 	printf("%d\n", ft_atoi(argv[1]));
+// 	return (0);
+// }
