@@ -19,7 +19,6 @@ Descripción:
 Cuenta el número de nodos de una lista.
 */
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_lstsize(t_list *lst)
 {
@@ -35,18 +34,18 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
-/*
-int	main(void)
-{
-	struct s_list	*lst;
-	struct s_list	primero;
-	struct s_list	segundo;
-	struct s_list	tercero;
 
-	lst = &primero;
-	primero.next = &segundo;
-	segundo.next = &tercero;
-	tercero.next = 0;
-	printf("%d\n", ft_lstsize(lst));
-	return (0);
-}*/
+// int	main(void)
+// {
+// 	struct s_list	*lst;
+// 	struct s_list	primero;
+// 	struct s_list	segundo;
+// 	struct s_list	tercero;
+
+// 	lst = &primero;
+// 	primero.next = &segundo;
+// 	segundo.next = &tercero;
+// 	tercero.next = 0;
+// 	printf("%d\n", ft_lstsize(lst));
+// 	return (0);
+// }
