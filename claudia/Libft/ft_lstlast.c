@@ -17,7 +17,6 @@ Funciones autorizadas: Ninguna
 Descripción: Devuelve el último nodo de la lista.
 */
 #include "libft.h"
-#include <stdio.h>
 
 t_list	*ft_lstlast(t_list *lst)
 {	
@@ -30,21 +29,21 @@ t_list	*ft_lstlast(t_list *lst)
 		aux = aux->next;
 	return (aux);
 }
-/*
-int	main(void)
-{
-	struct s_list	*lst;
-	struct s_list	primero;
-	struct s_list	segundo;
-	struct s_list	tercero;
 
-	lst = &primero;
-	primero.next = &segundo;
-	segundo.next = &tercero;
-	tercero.next = 0;
-	primero->content = "hola";
-	segundo->content = "conejo";
-	tercero->content = "blanco";
-	printf("%s\n", ft_lstlast(lst));
-	return (0);
-}*/
+// int	main(void)
+// {
+// 	struct s_list	*lst;
+// 	struct s_list	primero;
+// 	struct s_list	segundo;
+// 	struct s_list	tercero;
+
+// 	lst = &primero;
+// 	primero.next = &segundo;
+// 	segundo.next = &tercero;
+// 	tercero.next = 0;
+// 	primero->content = "hola";
+// 	segundo->content = "conejo";
+// 	tercero->content = "blanco";
+// 	printf("%s\n", ft_lstlast(lst));
+// 	return (0);
+// }
