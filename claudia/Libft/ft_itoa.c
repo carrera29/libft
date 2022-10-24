@@ -21,8 +21,6 @@ Valor devuelto:
 Funciones autorizadas: malloc
 */
 #include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 int	ft_contador(int n)
 {
@@ -63,9 +61,9 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 	return (str);
 }
-/*
-int	main(void)
-{
-	printf("%s\n", ft_itoa(-623));
-	return (0);
-}*/
+
+// int	main(void)
+// {
+// 	printf("%s\n", ft_itoa(-623));
+// 	return (0);
+// }
