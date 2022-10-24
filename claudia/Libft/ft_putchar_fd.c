@@ -18,7 +18,6 @@ Envía el caracter ’c’ al file descriptor dado.
 Valor devuelto: Nada
 Funciones autorizadas: write
 */
-
 #include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
