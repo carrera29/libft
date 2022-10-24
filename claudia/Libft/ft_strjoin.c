@@ -20,7 +20,6 @@ Valor devuelto:
 Funciones autorizadas: malloc
 */
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -46,9 +45,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[i] = '\0';
 	return (str);
 }
-/*
-int	main(void)
-{
-	printf("%s\n", ft_strjoin("hola,", " como estas"));
-	return (0);
-}*/
+
+// int	main(void)
+// {
+// 	printf("%s\n", ft_strjoin("hola,", " como estas"));
+// 	return (0);
+// }
