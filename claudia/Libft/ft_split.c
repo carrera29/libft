@@ -11,10 +11,21 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
 
-unsigned int	ft_division(char const *s, char c)
+static void	free_split(char **s)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+	{
+		free(s[i]);
+		i++;
+	}
+	free(s);
+}
+
+static unsigned int	ft_division(char const *s, char c)
 {
 	unsigned int	n;
 	unsigned int	i;
@@ -41,7 +52,10 @@ static char	*ft_write(char *split, const char *s, int count, int i)
 
 	split = (char *)malloc(sizeof(char) * (count + 1));
 	if (!split)
-		return (0);
+	{
+		free_split(&split);
+		return (NULL);
+	}
 	x = 0;
 	i = i - count;
 	while (count)
@@ -53,7 +67,7 @@ static char	*ft_write(char *split, const char *s, int count, int i)
 	return (split);
 }
 
-char	**ft_str(char **split, char const *s, char c)
+static char	**ft_str(char **split, char const *s, char c)
 {
 	unsigned int	i;
 	unsigned int	ii;
@@ -70,8 +84,8 @@ char	**ft_str(char **split, char const *s, char c)
 		{
 			while (s[i] && s[i] != c)
 			{
-				count++;
 				i++;
+				count++;
 			}
 			split[ii] = ft_write(split[ii], s, count, i);
 			count = 0;
@@ -94,20 +108,25 @@ char	**ft_split(char const *s, char c)
 	if (!split)
 		return (0);
 	split = ft_str(split, s, c);
+	if (!split)
+	{
+		free_split(split);
+		return (0);
+	}
 	return (split);
 }
-/*
-int	main(void)
-{
-	int		i;
-	char	**tab;
 
-	tab = ft_split("    Lulu es una gata ", 'a');
-	i = 0;
-	while (i < 4)
-	{
-		printf("%s\n", tab[i]);
-		i++;
-	}
-	return (0);
-}*/
+// int	main(void)
+// {
+// 	int		i;
+// 	char	**tab;
+
+// 	tab = ft_split("    Lulu es una gata ", 'a');
+// 	i = 0;
+// 	while (i < 4)
+// 	{
+// 		printf("%s\n", tab[i]);
+// 		i++;
+// 	}
+// 	return (0);
+// }
