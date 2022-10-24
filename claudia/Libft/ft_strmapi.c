@@ -25,7 +25,6 @@ a cada caracter.
 Funciones autorizadas: malloc.
 */
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -48,16 +47,15 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[l] = '\0';
 	return (str);
 }
-/*
-char	*f(i, s)
-{
-	s = 65 + i;
-	return (s);
-}
 
-int	main(void)
-{
-	printf("%s\n", ft_strmapi("hola", f));
-	return(0);
-}
-*/
+// char	*f(i, s)
+// {
+// 	s = 65 + i;
+// 	return (s);
+// }
+
+// int	main(void)
+// {
+// 	printf("%s\n", ft_strmapi("hola", f));
+// 	return(0);
+// }
