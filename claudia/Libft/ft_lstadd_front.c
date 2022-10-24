@@ -20,7 +20,6 @@ Descripción:
 Añade el nodo ’new’ al principio de la lista ’lst’.
 */
 #include "libft.h"
-#include <stdio.h>
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
@@ -29,23 +28,23 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	new->next = *lst;
 	*lst = new;
 }
-/*
-int	main(void)
-{
-	char	str[] = "Lulu";
-	char	str2[] = "Hola";
 
-	t_list	*primero;
-	t_list	*new;
-	t_list	**lst;
+// int	main(void)
+// {
+// 	char	str[] = "Lulu";
+// 	char	str2[] = "Hola";
 
-	primero = ft_lstnew(str);
-	new = ft_lstnew(str2);
-	lst = &primero;
+// 	t_list	*primero;
+// 	t_list	*new;
+// 	t_list	**lst;
 
-	ft_lstadd_front(lst, new);
-	t_list *begin = *lst;
+// 	primero = ft_lstnew(str);
+// 	new = ft_lstnew(str2);
+// 	lst = &primero;
 
-	printf("%s\n", begin->content);
-	printf("%s\n", begin->next->content);
-}*/
+// 	ft_lstadd_front(lst, new);
+// 	t_list *begin = *lst;
+
+// 	printf("%s\n", begin->content);
+// 	printf("%s\n", begin->next->content);
+// }
