@@ -24,7 +24,6 @@ dada como parámetro, además de liberar el nodo.
 La memoria de ’next’ no debe liberarse.
 */
 #include "libft.h"
-#include <stdlib.h>
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
