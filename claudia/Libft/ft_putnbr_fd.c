@@ -18,7 +18,6 @@ Escribe el número ’n’ al file descriptor dado.
 Valor devuelto: Nada
 Funciones autorizadas: write
 */
-#include <unistd.h>
 #include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
@@ -44,9 +43,9 @@ void	ft_putnbr_fd(int n, int fd)
 		}
 	}
 }
-/*
-int main(void)
-{
-	ft_putnbr_fd(-2147483648);
-	return (0);
-}*/
+
+// int main(void)
+// {
+// 	ft_putnbr_fd(-2147483648);
+// 	return (0);
+// }
