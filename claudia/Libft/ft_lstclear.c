@@ -24,9 +24,6 @@ utilizando la función ’del’ y free(3).
 Al final, el puntero a la lista debe ser NULL.
 */
 #include "libft.h"
-//#include "ft_lstdelone.c"
-#include <stdlib.h>
-
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
