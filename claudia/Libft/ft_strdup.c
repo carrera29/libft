@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strdup(const char *s1)
 {
@@ -30,10 +29,10 @@ char	*ft_strdup(const char *s1)
 	str[i] = '\0';
 	return (str);
 }
-/*
-int	main(void)
-{
-	printf("%s\n", ft_strdup("this is a normal test"));
-	printf("%s\n", strdup("this is a normal test"));
-	return (0);
-}*/
+
+// int	main(void)
+// {
+// 	printf("%s\n", ft_strdup("this is a normal test"));
+// 	printf("%s\n", strdup("this is a normal test"));
+// 	return (0);
+// }
