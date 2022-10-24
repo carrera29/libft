@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -29,10 +27,10 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)&s[i]);
 	return (0);
 }
-/*
-int	main(void)
-{
-	printf("%d\n", ft_strchr("tripouille", ('t' + 256));
-	printf("%d\n", ft_strchr("tripouille", ('t' + 256));
-	return (0);
-}*/
+
+// int	main(void)
+// {
+// 	printf("%d\n", ft_strchr("tripouille", ('t' + 256));
+// 	printf("%d\n", ft_strchr("tripouille", ('t' + 256));
+// 	return (0);
+// }
