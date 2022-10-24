@@ -18,7 +18,6 @@ Escribe la string ’s’ en el file descriptor indicado.
 Valor devuelto: Nada
 Funciones autorizadas: write
 */
-#include <unistd.h>
 #include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
