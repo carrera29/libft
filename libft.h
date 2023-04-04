@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clcarre <clcarrer@student.42madrid.com>    +#+  +:+       +#+        */
+/*   By: clcarrer <clcarrer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 16:35:13 by clcarre           #+#    #+#             */
-/*   Updated: 2022/04/08 10:22:41 by clcarre          ###   ########.fr       */
+/*   Updated: 2023/04/04 13:06:27 by clcarrer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
-# include <wchar.h>
+# include <unistd.h>
 
 int		ft_atoi(const char *str);
-void	*ft_bzero(void *s, size_t n);
+void	*ft_bzero(char *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);

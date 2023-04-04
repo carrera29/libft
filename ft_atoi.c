@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clcarre <clcarrer@student.42madrid.com>    +#+  +:+       +#+        */
+/*   By: clcarrer <clcarrer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 08:32:08 by clcarre           #+#    #+#             */
-/*   Updated: 2022/04/02 10:41:34 by clcarre          ###   ########.fr       */
+/*   Updated: 2023/04/04 13:38:30 by clcarrer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,3 @@ int	ft_atoi(const char *str)
 	}
 	return (s * r);
 }
-
-// int	main(int argc, char **argv)
-// {
-// 	printf("%d\n", ft_atoi(argv[1]));
-// 	return (0);
-// }
