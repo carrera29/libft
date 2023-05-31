@@ -6,14 +6,18 @@
 /*   By: pollo <pollo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 16:35:13 by clcarre           #+#    #+#             */
-/*   Updated: 2023/05/31 10:36:48 by pollo            ###   ########.fr       */
+/*   Updated: 2023/05/31 12:02:57 by pollo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <stdlib.h>
 # include <unistd.h>
+# include <fcntl.h>
+
+# define BUFFER_SIZE 1
 
 typedef struct s_list
 {
@@ -65,4 +69,5 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+char	*get_next_line(int fd);
 #endif
