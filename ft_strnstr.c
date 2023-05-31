@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clcarre <clcarrer@student.42madrid.com>    +#+  +:+       +#+        */
+/*   By: pollo <pollo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 17:57:59 by clcarre           #+#    #+#             */
-/*   Updated: 2022/04/02 09:42:33 by clcarre          ###   ########.fr       */
+/*   Updated: 2023/05/31 10:36:04 by pollo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-
-// int	main(void)
-// {
-// 	printf("%s\n", ft_strnstr("aaabcabcd", "aaabc", 5));
-// 	printf("%s\n", strnstr("aaabcabcd", "aaabc", 5));
-// 	return (0);
-// }

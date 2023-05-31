@@ -3,22 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clcarre <clcarrer@student.42madrid.com>    +#+  +:+       +#+        */
+/*   By: pollo <pollo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 13:01:45 by clcarre           #+#    #+#             */
-/*   Updated: 2022/04/07 14:36:27 by clcarre          ###   ########.fr       */
+/*   Updated: 2023/05/31 10:34:44 by pollo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Descripción:
-Escribe la string ’s’ en el file descriptor indicado, 
-seguido de un salto de línea.
-#1. La string que escribir.
-#2. El file descriptor sobre el que escribir.
-Valor devuelto: Nada
-Funciones autorizadas: write
-*/
 #include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
@@ -32,9 +23,3 @@ void	ft_putendl_fd(char *s, int fd)
 		write(fd, &s[i++], 1);
 	write(fd, "\n", 1);
 }
-
-// int	main(void)
-// {
-// 	ft_putendl_fd("hola");
-// 	return (0);
-// }

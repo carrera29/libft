@@ -3,21 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clcarre <clcarrer@student.42madrid.com>    +#+  +:+       +#+        */
+/*   By: pollo <pollo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 09:58:23 by clcarre           #+#    #+#             */
-/*   Updated: 2022/04/06 10:58:09 by clcarre          ###   ########.fr       */
+/*   Updated: 2023/05/31 10:34:14 by pollo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Parámetros lst: 
-- el principio de la lista.
-Valor devuelto: La longitud de la lista.
-Funciones autorizadas: Ninguna
-Descripción:
-Cuenta el número de nodos de una lista.
-*/
 #include "libft.h"
 
 int	ft_lstsize(t_list *lst)
@@ -34,18 +26,3 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
-
-// int	main(void)
-// {
-// 	struct s_list	*lst;
-// 	struct s_list	primero;
-// 	struct s_list	segundo;
-// 	struct s_list	tercero;
-
-// 	lst = &primero;
-// 	primero.next = &segundo;
-// 	segundo.next = &tercero;
-// 	tercero.next = 0;
-// 	printf("%d\n", ft_lstsize(lst));
-// 	return (0);
-// }

@@ -3,23 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clcarre <clcarrer@student.42madrid.com>    +#+  +:+       +#+        */
+/*   By: pollo <pollo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 08:43:29 by clcarre           #+#    #+#             */
-/*   Updated: 2022/04/05 10:27:54 by clcarre          ###   ########.fr       */
+/*   Updated: 2023/05/31 10:36:19 by pollo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Descripción:
-Reserva con malloc(3) y devuelve una copia de ’s1’
-con los caracteres dados en ’set’ eliminados 
-tanto del principio como del final.
-Valor devuelto:
-- La string recortada. 
-- NULL si falla la reserva.
-Funciones autorizadas: malloc.
-*/
 #include "libft.h"
 
 char	*ft_return_s(const char *s1, int i)
@@ -116,9 +106,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str[i] = '\0';
 	return (str);
 }
-
-// int	main(void)
-// {
-// 	printf("%s\n", ft_strtrim("          ", " "));
-// 	return (0);
-// }

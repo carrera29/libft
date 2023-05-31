@@ -3,23 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clcarre <clcarrer@student.42madrid.com>    +#+  +:+       +#+        */
+/*   By: pollo <pollo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 17:23:39 by clcarre           #+#    #+#             */
-/*   Updated: 2022/04/07 17:07:48 by clcarre          ###   ########.fr       */
+/*   Updated: 2023/05/31 10:32:49 by pollo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Descripción:
-Reserva con malloc(3) y devuelve una string que
-representa el número dado como argumento. 
-Los números negativos deben gestionarse correctamente.
-Valor devuelto:
-- La string que represente el número. 
-- NULL si falla la reserva.
-Funciones autorizadas: malloc
-*/
 #include "libft.h"
 
 int	ft_contador(int n)
@@ -61,9 +51,3 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 	return (str);
 }
-
-// int	main(void)
-// {
-// 	printf("%s\n", ft_itoa(-623));
-// 	return (0);
-// }

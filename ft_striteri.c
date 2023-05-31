@@ -3,24 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clcarre <clcarrer@student.42madrid.com>    +#+  +:+       +#+        */
+/*   By: pollo <pollo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 11:50:43 by clcarre           #+#    #+#             */
-/*   Updated: 2022/03/30 13:45:04 by clcarre          ###   ########.fr       */
+/*   Updated: 2023/05/31 10:35:31 by pollo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Descripción:
-Aplica la función ’f’ a cada caracter de la string
-dada como argumento, pasando su índice como primer argumento. 
-Cada caracter se pasa como una dirección a ’f’, 
-por si hace falta modificarlo.
-#1. La string que iterar.
-#2. La función a aplicar a cada caracter.
-Valor devuelto: Nada
-Funciones autorizadas: Ninguna
-*/
 #include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
@@ -36,19 +25,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-
-// void	*f(unsigned int i, char *s)
-// {
-// 	s = 65 + i;
-// }
-
-// int	main(void)
-// {
-// 	char	s[] = "hola";
-// 	int i;
-
-// 	i = 0;
-// 	ft_striteri(s, *f(i, s));
-// 	printf("%s\n", s);
-// 	return(0);
-// }

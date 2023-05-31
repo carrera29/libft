@@ -3,27 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clcarre <clcarrer@student.42madrid.com>    +#+  +:+       +#+        */
+/*   By: pollo <pollo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 10:39:13 by clcarre           #+#    #+#             */
-/*   Updated: 2022/04/07 14:34:05 by clcarre          ###   ########.fr       */
+/*   Updated: 2023/05/31 10:35:58 by pollo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Descripción:
-Aplica la función ’f’ a cada caracter de la string ’s’ 
-para crear la nueva string, 
-resultado de aplicar sucesivas veces ’f’ (utilizando malloc(3)).
-A esta función se le pasará el índice del caracter iterado.
-#1. La string que iterar.
-#2. Un puntero a la función que aplicar a cada caracter.
-Valor devuelto:
-- La string resultante de aplicar sucesivas veces ’f’
-a cada caracter. 
-- NULL si falla la reserva.
-Funciones autorizadas: malloc.
-*/
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
@@ -47,15 +33,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[l] = '\0';
 	return (str);
 }
-
-// char	*f(i, s)
-// {
-// 	s = 65 + i;
-// 	return (s);
-// }
-
-// int	main(void)
-// {
-// 	printf("%s\n", ft_strmapi("hola", f));
-// 	return(0);
-// }

@@ -3,21 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clcarre <clcarrer@student.42madrid.com>    +#+  +:+       +#+        */
+/*   By: pollo <pollo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 12:14:42 by clcarre           #+#    #+#             */
-/*   Updated: 2022/03/30 13:01:14 by clcarre          ###   ########.fr       */
+/*   Updated: 2023/05/31 10:34:32 by pollo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Descripción:
-Envía el caracter ’c’ al file descriptor dado.
-#1. El caracter a enviar.
-#2. El file descriptor sobre el que escribir.
-Valor devuelto: Nada
-Funciones autorizadas: write
-*/
 #include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)

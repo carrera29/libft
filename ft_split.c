@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clcarre <clcarrer@student.42madrid.com>    +#+  +:+       +#+        */
+/*   By: pollo <pollo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 15:04:41 by clcarre           #+#    #+#             */
-/*   Updated: 2022/04/05 13:15:40 by clcarre          ###   ########.fr       */
+/*   Updated: 2023/05/31 10:35:06 by pollo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,18 +115,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (split);
 }
-
-// int	main(void)
-// {
-// 	int		i;
-// 	char	**tab;
-
-// 	tab = ft_split("    Lulu es una gata ", 'a');
-// 	i = 0;
-// 	while (i < 4)
-// 	{
-// 		printf("%s\n", tab[i]);
-// 		i++;
-// 	}
-// 	return (0);
-// }

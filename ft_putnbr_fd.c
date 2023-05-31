@@ -3,21 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clcarre <clcarrer@student.42madrid.com>    +#+  +:+       +#+        */
+/*   By: pollo <pollo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 13:18:47 by clcarre           #+#    #+#             */
-/*   Updated: 2022/03/30 15:30:44 by clcarre          ###   ########.fr       */
+/*   Updated: 2023/05/31 10:34:52 by pollo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Descripción:
-Escribe el número ’n’ al file descriptor dado.
-#1. El número ’n’ a escribir.
-#2. El file descriptor sobre el que escribir.
-Valor devuelto: Nada
-Funciones autorizadas: write
-*/
 #include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
@@ -43,9 +35,3 @@ void	ft_putnbr_fd(int n, int fd)
 		}
 	}
 }
-
-// int main(void)
-// {
-// 	ft_putnbr_fd(-2147483648);
-// 	return (0);
-// }

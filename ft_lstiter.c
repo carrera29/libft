@@ -3,23 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clcarre <clcarrer@student.42madrid.com>    +#+  +:+       +#+        */
+/*   By: pollo <pollo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 09:02:01 by clcarre           #+#    #+#             */
-/*   Updated: 2022/04/08 09:06:34 by clcarre          ###   ########.fr       */
+/*   Updated: 2023/05/31 10:33:35 by pollo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Parámetros lst: 
-- un puntero al primer nodo.
-- f: un puntero a la función que utilizará cada nodo.
-Valor devuelto: Nada
-Funciones autorizadas: Ninguna
-Descripción:
-Itera la lista ’lst’ y aplica la función ’f’ 
-en el contenido de cada nodo.
-*/
 #include "libft.h"
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))

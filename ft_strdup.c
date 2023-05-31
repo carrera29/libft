@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clcarre <clcarrer@student.42madrid.com>    +#+  +:+       +#+        */
+/*   By: pollo <pollo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 10:04:02 by clcarre           #+#    #+#             */
-/*   Updated: 2022/04/02 11:37:12 by clcarre          ###   ########.fr       */
+/*   Updated: 2023/05/31 10:35:20 by pollo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,3 @@ char	*ft_strdup(const char *s1)
 	str[i] = '\0';
 	return (str);
 }
-
-// int	main(void)
-// {
-// 	printf("%s\n", ft_strdup("this is a normal test"));
-// 	printf("%s\n", strdup("this is a normal test"));
-// 	return (0);
-// }

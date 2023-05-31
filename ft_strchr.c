@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clcarre <clcarrer@student.42madrid.com>    +#+  +:+       +#+        */
+/*   By: pollo <pollo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 15:50:41 by clcarre           #+#    #+#             */
-/*   Updated: 2022/04/02 08:49:18 by clcarre          ###   ########.fr       */
+/*   Updated: 2023/05/31 10:35:13 by pollo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)&s[i]);
 	return (0);
 }
-
-// int	main(void)
-// {
-// 	printf("%d\n", ft_strchr("tripouille", ('t' + 256));
-// 	printf("%d\n", ft_strchr("tripouille", ('t' + 256));
-// 	return (0);
-// }

@@ -3,22 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clcarre <clcarrer@student.42madrid.com>    +#+  +:+       +#+        */
+/*   By: pollo <pollo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 12:51:51 by clcarre           #+#    #+#             */
-/*   Updated: 2022/04/04 10:35:04 by clcarre          ###   ########.fr       */
+/*   Updated: 2023/05/31 10:35:40 by pollo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Descripción:
-Reserva con malloc(3) una nueva string, basada en
-la unión de las 2 strings dadas como parámetros.
-Valor devuelto:
-- La nueva string. 
-- NULL si la reserva falla.
-Funciones autorizadas: malloc
-*/
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
@@ -45,9 +36,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[i] = '\0';
 	return (str);
 }
-
-// int	main(void)
-// {
-// 	printf("%s\n", ft_strjoin("hola,", " como estas"));
-// 	return (0);
-// }
